@@ -93,7 +93,7 @@ const TCHAR *fmtx_timestamp(int64_t n, unsigned int flags)
       a27 /= I64K(60);
       m = (unsigned int)(a27 % I64K(60));
       h = (unsigned int)(a27 / I64K(60));
-      _sntprintf(buf, FMTX_BUFFER_SIZE, _T("%s%u:%02u:%02u.%04u"), n27 < 0 ? _T("-") : _T(""), h, m, s, f/1000);
+      _sntprintf(buf, FMTX_BUFFER_SIZE, _T("%s%u:%02u:%02u.%03u"), n27 < 0 ? _T("-") : _T(""), h, m, s, f/1000);
       break;
     }
 
