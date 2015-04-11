@@ -488,7 +488,7 @@ static int report_buffering_stats(TS_reader_p  tsreader,
       // CC is meant to increment if we have a payload and not if we don't
       // CC may legitimately 'be wrong' if the discontinuity flag is set
 
-      if (ss->last_cc > 0 && !is_discontinuity)
+      if (ss->last_cc != -1 && !is_discontinuity)
       {
         // We are allowed 1 dup packet
         if (ss->last_cc == cc)
